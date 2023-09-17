@@ -38,12 +38,11 @@ export default class NewClass extends cc.Component {
             for (let x = 1; x <= 8; x++) {
                 for (let y = 2; y <= 7; y++) {
                     if ((mouse_pos.x < 64 * (x + 1) && mouse_pos.x > 64 * x) && (mouse_pos.y < 64 * (y + 1) && mouse_pos.y > 64 * y)) {
-                        cc.log("this.x: " + this.x)
-                        cc.log("this.y: " + this.y)
                         this.x = 64 * (x + 0.5)
                         this.y = 64 * (y + 0.5)
-                        cc.log("after this.x: " + this.x)
-                        cc.log("after this.y: " + this.y)
+                    } else {
+                        this.x = 160
+                        this.y = 605
                     }
                 }
             }
