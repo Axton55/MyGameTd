@@ -28,48 +28,130 @@ export default class NewClass extends cc.Component {
             cc.log(mouse_pos.x, mouse_pos.y)
             /** row 1 **/
             if ((mouse_pos.x < 128 && mouse_pos.x > 64) && (mouse_pos.y > 448 && mouse_pos.y < 512)) {
-                this.x = 96 + this.factor * 0
-                this.y = 480 + this.factor * 0
+                this.x = 96
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 1 && mouse_pos.x > 64 + this.factor * 1) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 1
-                this.y = 480 + this.factor * 1
+            } else if((mouse_pos.x < 192 && mouse_pos.x > 128) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 160
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 2 && mouse_pos.x > 64 + this.factor * 2) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 2
-                this.y = 480 + this.factor * 2
+            } else if((mouse_pos.x < 256 && mouse_pos.x > 192) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 224
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 3 && mouse_pos.x > 64 + this.factor * 3) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 3
-                this.y = 480 + this.factor * 3
+            } else if((mouse_pos.x < 320 && mouse_pos.x > 256) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 288
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 4 && mouse_pos.x > 64 + this.factor * 4) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 4
-                this.y = 480 + this.factor * 4
+            } else if((mouse_pos.x < 384 && mouse_pos.x > 320) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 352
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 5 && mouse_pos.x > 64 + this.factor * 5) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 5
-                this.y = 480 + this.factor * 5
+            } else if((mouse_pos.x < 448 && mouse_pos.x > 384) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 416
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 6 && mouse_pos.x > 64 + this.factor * 6) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 6
-                this.y = 480 + this.factor * 6
+            } else if((mouse_pos.x < 512 && mouse_pos.x > 448) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 480
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
-            } else if((mouse_pos.x < 128 + this.factor * 7 && mouse_pos.x > 64 + this.factor * 7) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
-                this.x = 96 + this.factor * 7
-                this.y = 480 + this.factor * 7
+            } else if((mouse_pos.x < 576 && mouse_pos.x > 512) && (mouse_pos.y > 448 && mouse_pos.y < 512)){
+                this.x = 544
+                this.y = 480
                 cc.log("this.x: " + this.x)
                 cc.log("this.y: " + this.y)
             }
             /** row 2 **/
+            else if ((mouse_pos.x < 128 && mouse_pos.x > 64) && (mouse_pos.y > 384 && mouse_pos.y < 448)) {
+                this.x = 96
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 192 && mouse_pos.x > 128) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 160
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 256 && mouse_pos.x > 192) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 224
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 320 && mouse_pos.x > 256) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 288
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 384 && mouse_pos.x > 320) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 352
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 448 && mouse_pos.x > 384) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 416
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 512 && mouse_pos.x > 448) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 480
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 576 && mouse_pos.x > 512) && (mouse_pos.y > 384 && mouse_pos.y < 448)){
+                this.x = 544
+                this.y = 416
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            }
             /** row 3 **/
+            else if ((mouse_pos.x < 128 && mouse_pos.x > 64) && (mouse_pos.y > 320 && mouse_pos.y < 384)) {
+                this.x = 96
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 192 && mouse_pos.x > 128) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 160
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 256 && mouse_pos.x > 192) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 224
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 320 && mouse_pos.x > 256) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 288
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 384 && mouse_pos.x > 320) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 352
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 448 && mouse_pos.x > 384) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 416
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 512 && mouse_pos.x > 448) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 480
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            } else if((mouse_pos.x < 576 && mouse_pos.x > 512) && (mouse_pos.y > 320 && mouse_pos.y < 384)){
+                this.x = 544
+                this.y = 352
+                cc.log("this.x: " + this.x)
+                cc.log("this.y: " + this.y)
+            }
             /** row 4 **/
             /** row 5 **/
             /** row 6 **/
