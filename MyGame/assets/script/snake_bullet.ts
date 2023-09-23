@@ -16,10 +16,6 @@ export default class NewClass extends cc.Component {
         this.screen_width = cc.view.getCanvasSize().width
     }
 
-    start () {
-
-    }
-
     update (dt) {
         this.node.x += this.speed * dt
         if(this.node.x + this.node.width > this.screen_width){

@@ -35,7 +35,7 @@
         "__id__": 32
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -1384,7 +1384,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        160,
+        158.894,
         605,
         0,
         0,
@@ -1449,6 +1449,10 @@
       "__id__": 29
     },
     "_enabled": true,
+    "anim": null,
+    "bulletPre": {
+      "__uuid__": "12304af2-d9a4-47bc-8281-90f5094a76fd"
+    },
     "_id": "68cqqOD6ZDGplQrOgykGej"
   },
   {
