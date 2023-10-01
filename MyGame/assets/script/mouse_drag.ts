@@ -66,9 +66,9 @@ export default class NewClass extends cc.Component {
 
     // shooting function
     shoot() {
-        cc.resources.load("", cc.AudioClip, (error, clip:cc.AudioClip) =>{
-            cc.audioEngine.playEffect(clip, false)
-        })
+        // cc.resources.load("C:\\Users\\Administrator\\Music\\Audio\\laser.mp3", cc.AudioClip, (error, clip:cc.AudioClip) =>{
+        //     cc.audioEngine.playEffect(clip, false)
+        // })
         let bullet = cc.instantiate(this.bulletPre)
         bullet.x = this.node.x + this.node.width / 2;
         bullet.y = this.node.y;
