@@ -979,8 +979,20 @@
       "__id__": 2
     },
     "_enabled": true,
-    "enemyPre": {
+    "enemyPinkPre": {
       "__uuid__": "34fe585b-f418-4608-9617-58231ddb2f14"
+    },
+    "enemyBeigePre": {
+      "__uuid__": "85f3f384-597a-45c3-ba63-af0f685d1c99"
+    },
+    "enemyGreenPre": {
+      "__uuid__": "a54b03e5-8feb-4a8f-81a8-8d13e8b74121"
+    },
+    "enemyBluePre": {
+      "__uuid__": "eb6ddff9-1d44-4980-8906-3e76f48988e8"
+    },
+    "enemyYellowPre": {
+      "__uuid__": "68dcdcde-f287-45e6-8c97-080c517344de"
     },
     "_id": "05jTKB9YZDq6MJJWW++63N"
   },
