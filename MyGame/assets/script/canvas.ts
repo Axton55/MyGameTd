@@ -14,6 +14,9 @@ export default class Canvas extends cc.Component {
     @property(cc.Prefab)
     enemyYellowPre: cc.Prefab = null
 
+    // score of the game    
+    score: number = 0
+
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
@@ -22,6 +25,9 @@ export default class Canvas extends cc.Component {
         this.schedule(() => {
             let count = Math.trunc(Math.random() * 10 % 5)
             cc.log("count: " + count)
+            // test
+            count = 0
+            
             switch (count) {
                 case 0:
                     let enemyPink = cc.instantiate(this.enemyPinkPre)

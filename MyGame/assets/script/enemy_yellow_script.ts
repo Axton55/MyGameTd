@@ -1,3 +1,5 @@
+import Canvas from "./canvas";
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -9,6 +11,8 @@ export default class EnemyYellow extends cc.Component {
 
     @property
     speed: number = 50
+
+    life:number = 1
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -36,11 +40,17 @@ export default class EnemyYellow extends cc.Component {
     }
 
     onCollisionEnter(other: cc.Collider, self: cc.Collider){
-        if(other.tag == 0){
-            this.node.removeFromParent(true)
-            this.destroy()
+        if (other.tag == 0) {
+            if (this.life == 1) {
+                this.node.removeFromParent(true)
+                this.destroy()
+                cc.find("Canvas").getComponent(Canvas).score += 1
+                cc.find("lbl_score").getComponent(cc.Label).string = "Score: " + cc.find("Canvas").getComponent(Canvas).score
+            } else {
+                this.life--;
+            }
             other.node.removeFromParent(true)
             other.destroy()
-        }
+        } 
     }
 }
