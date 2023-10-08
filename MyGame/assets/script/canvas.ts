@@ -26,7 +26,7 @@ export default class Canvas extends cc.Component {
             let count = Math.trunc(Math.random() * 10 % 5)
             cc.log("count: " + count)
             // test
-            count = 0
+            // count = 0
             
             switch (count) {
                 case 0:
