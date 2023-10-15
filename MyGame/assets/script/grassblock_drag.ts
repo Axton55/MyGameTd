@@ -12,22 +12,12 @@ export default class NewClass extends cc.Component {
     @property(cc.AnimationClip)
     anim: cc.AnimationClip = null!
 
-    @property(cc.Prefab)
-    bulletMousePre: cc.Prefab = null!
-
-    // reload: number = 0.5
-    mouse_reload:number = 3.0
-
     factor: number = 64
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
         this.touchHandler()
-        if(this.bulletMousePre!=null){
-            this.schedule(this.shoot, this.mouse_reload);
-        }
-        
     }
 
     start() {
@@ -60,33 +50,15 @@ export default class NewClass extends cc.Component {
                         done = true
                         break;
                     }
-                    // else {
-                    //     this.x = 160
-                    //     this.y = 605
-                    //     cc.log("else this.x: " + this.x)
-                    //     cc.log("else this.y: " + this.y)
-                    // }
                 }
             }
 
             if (!done) {
-                this.x = 480
+                this.x = 416
                 this.y = 605
             }
         }, this.node)
-    }
 
-    // shooting function
-    shoot() {
-        // cc.resources.load("C:\\Users\\Administrator\\Music\\Audio\\laser.mp3", cc.AudioClip, (error, clip:cc.AudioClip) =>{
-        //     cc.audioEngine.playEffect(clip, false)
-        // })
-        // mouse bullet
-        if (this.bulletMousePre != null) {
-            let bullet = cc.instantiate(this.bulletMousePre)
-            bullet.x = this.node.x + this.node.width / 2;
-            bullet.y = this.node.y;
-            bullet.setParent(cc.director.getScene())
-        }
+        this.node.off(cc.Node.EventType.TOUCH_END)
     }
 }

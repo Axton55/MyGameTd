@@ -13,9 +13,25 @@ export default class NewClass extends cc.Component {
     anim: cc.AnimationClip = null!
 
     @property(cc.Prefab)
+    bulletSnakePre: cc.Prefab = null!
+
+    @property(cc.Prefab)
+    bulletBatPre: cc.Prefab = null!
+
+    @property(cc.Prefab)
+    bulletBeePre: cc.Prefab = null!
+
+    @property(cc.Prefab)
+    bulletFishPre: cc.Prefab = null!
+
+    @property(cc.Prefab)
     bulletMousePre: cc.Prefab = null!
 
     // reload: number = 0.5
+    snake_reload:number = 1.5
+    bat_reload:number = 1.0
+    bee_reload:number = 2.0
+    fish_reload:number = 0.5
     mouse_reload:number = 3.0
 
     factor: number = 64
@@ -24,7 +40,15 @@ export default class NewClass extends cc.Component {
 
     onLoad() {
         this.touchHandler()
-        if(this.bulletMousePre!=null){
+        if(this.bulletSnakePre!=null){
+            this.schedule(this.shoot, this.snake_reload);
+        } else if(this.bulletBatPre!=null){
+            this.schedule(this.shoot, this.bat_reload);
+        } else if(this.bulletBeePre!=null){
+            this.schedule(this.shoot, this.bee_reload);
+        } else if(this.bulletFishPre!=null){
+            this.schedule(this.shoot, this.fish_reload);
+        } else if(this.bulletMousePre!=null){
             this.schedule(this.shoot, this.mouse_reload);
         }
         
@@ -70,7 +94,7 @@ export default class NewClass extends cc.Component {
             }
 
             if (!done) {
-                this.x = 480
+                this.x = 160
                 this.y = 605
             }
         }, this.node)
@@ -81,6 +105,39 @@ export default class NewClass extends cc.Component {
         // cc.resources.load("C:\\Users\\Administrator\\Music\\Audio\\laser.mp3", cc.AudioClip, (error, clip:cc.AudioClip) =>{
         //     cc.audioEngine.playEffect(clip, false)
         // })
+
+        // snake bullet
+        if (this.bulletSnakePre != null) {
+            let bullet = cc.instantiate(this.bulletSnakePre)
+            bullet.x = this.node.x + this.node.width / 2;
+            bullet.y = this.node.y;
+            bullet.setParent(cc.director.getScene())
+        }
+
+        // bat bullet
+        if (this.bulletBatPre != null) {
+            let bullet = cc.instantiate(this.bulletBatPre)
+            bullet.x = this.node.x + this.node.width / 2;
+            bullet.y = this.node.y;
+            bullet.setParent(cc.director.getScene())
+        }
+
+        // bee bullet
+        if (this.bulletBeePre != null) {
+            let bullet = cc.instantiate(this.bulletBeePre)
+            bullet.x = this.node.x + this.node.width / 2;
+            bullet.y = this.node.y;
+            bullet.setParent(cc.director.getScene())
+        }
+
+        // fish bullet
+        if (this.bulletFishPre != null) {
+            let bullet = cc.instantiate(this.bulletFishPre)
+            bullet.x = this.node.x + this.node.width / 2;
+            bullet.y = this.node.y;
+            bullet.setParent(cc.director.getScene())
+        }
+
         // mouse bullet
         if (this.bulletMousePre != null) {
             let bullet = cc.instantiate(this.bulletMousePre)

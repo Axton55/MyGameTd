@@ -11,12 +11,11 @@ const { ccclass, property } = cc._decorator;
 export default class NewClass extends cc.Component {
     @property(cc.AnimationClip)
     anim: cc.AnimationClip = null!
-
     @property(cc.Prefab)
-    bulletMousePre: cc.Prefab = null!
+    bulletBatPre: cc.Prefab = null!
 
     // reload: number = 0.5
-    mouse_reload:number = 3.0
+    bat_reload:number = 1.0
 
     factor: number = 64
 
@@ -24,9 +23,9 @@ export default class NewClass extends cc.Component {
 
     onLoad() {
         this.touchHandler()
-        if(this.bulletMousePre!=null){
-            this.schedule(this.shoot, this.mouse_reload);
-        }
+        if(this.bulletBatPre!=null){
+            this.schedule(this.shoot, this.bat_reload);
+        } 
         
     }
 
@@ -60,17 +59,11 @@ export default class NewClass extends cc.Component {
                         done = true
                         break;
                     }
-                    // else {
-                    //     this.x = 160
-                    //     this.y = 605
-                    //     cc.log("else this.x: " + this.x)
-                    //     cc.log("else this.y: " + this.y)
-                    // }
                 }
             }
 
             if (!done) {
-                this.x = 480
+                this.x = 224
                 this.y = 605
             }
         }, this.node)
@@ -81,9 +74,10 @@ export default class NewClass extends cc.Component {
         // cc.resources.load("C:\\Users\\Administrator\\Music\\Audio\\laser.mp3", cc.AudioClip, (error, clip:cc.AudioClip) =>{
         //     cc.audioEngine.playEffect(clip, false)
         // })
-        // mouse bullet
-        if (this.bulletMousePre != null) {
-            let bullet = cc.instantiate(this.bulletMousePre)
+
+        // bat bullet
+        if (this.bulletBatPre != null) {
+            let bullet = cc.instantiate(this.bulletBatPre)
             bullet.x = this.node.x + this.node.width / 2;
             bullet.y = this.node.y;
             bullet.setParent(cc.director.getScene())

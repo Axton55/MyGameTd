@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "grass_block_anim",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "width": [
+        {
+          "frame": 0,
+          "value": 64
+        }
+      ],
+      "height": []
+    }
+  },
+  "events": []
+}

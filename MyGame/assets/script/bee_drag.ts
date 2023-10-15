@@ -13,10 +13,10 @@ export default class NewClass extends cc.Component {
     anim: cc.AnimationClip = null!
 
     @property(cc.Prefab)
-    bulletMousePre: cc.Prefab = null!
+    bulletBeePre: cc.Prefab = null!
 
     // reload: number = 0.5
-    mouse_reload:number = 3.0
+    bee_reload:number = 2.0
 
     factor: number = 64
 
@@ -24,8 +24,8 @@ export default class NewClass extends cc.Component {
 
     onLoad() {
         this.touchHandler()
-        if(this.bulletMousePre!=null){
-            this.schedule(this.shoot, this.mouse_reload);
+        if(this.bulletBeePre!=null){
+            this.schedule(this.shoot, this.bee_reload);
         }
         
     }
@@ -60,17 +60,11 @@ export default class NewClass extends cc.Component {
                         done = true
                         break;
                     }
-                    // else {
-                    //     this.x = 160
-                    //     this.y = 605
-                    //     cc.log("else this.x: " + this.x)
-                    //     cc.log("else this.y: " + this.y)
-                    // }
                 }
             }
 
             if (!done) {
-                this.x = 480
+                this.x = 288
                 this.y = 605
             }
         }, this.node)
@@ -81,9 +75,10 @@ export default class NewClass extends cc.Component {
         // cc.resources.load("C:\\Users\\Administrator\\Music\\Audio\\laser.mp3", cc.AudioClip, (error, clip:cc.AudioClip) =>{
         //     cc.audioEngine.playEffect(clip, false)
         // })
-        // mouse bullet
-        if (this.bulletMousePre != null) {
-            let bullet = cc.instantiate(this.bulletMousePre)
+
+        // bee bullet
+        if (this.bulletBeePre != null) {
+            let bullet = cc.instantiate(this.bulletBeePre)
             bullet.x = this.node.x + this.node.width / 2;
             bullet.y = this.node.y;
             bullet.setParent(cc.director.getScene())
